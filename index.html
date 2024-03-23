@@ -3,293 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,0" />
     <title>SFI SSMPTC-Study Materials</title>
-    <link rel = "icon" href = https://i.imgur.com/60EKe8u.png type = "image/x-icon">
+    <link rel = "icon" href = "images/icon.png" type = "image/x-icon">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="SFI SSMPTC-Study Materials">
+    <meta property="og:title" content="SFI SSM POLY-Study Materials">
     <meta property="og:description" content="This page is for Kerala polytechnic students. Created by SFI SSMPOLY">
-    <meta property="og:image" content="https://i.imgur.com/I1tzUQ8.png">
+    <meta property="og:image" content="shareImg.png">
     <meta property="og:url" content="https://sfissmptc.github.io/polynotes-sfissmptc/">
     <meta property="og:type" content="website">
 
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-image: url(https://i.imgur.com/CTxbqPX.jpg);
-        /*   background-image: url(https://i.imgur.com/FyTgU42.jpeg);  */
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-	    height: 100vh;
-        }
-        body::-webkit-scrollbar {width: 0em;}
 
-        header {
-            color: #fff;
-            text-align: left;
-            padding: 1px 30px;
-			/*background-color: rgba(197, 0, 0, 0.502);*/
-		}
-        header h1 {
-            font-size: 52px;
-            margin: 0 0.5em 0 0em;
-        }
-        header h2{
-            font-size: 32px;
-        	margin: 0 0em 4px 0.5em;
-        } 
-        header h1,h2{
-            display: inline-block;
-        }
-        div{
-            font-weight: bold;
-        }
-        .content{
-            flex: 1;
-            overflow-y: none;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px 20px 20px 20px;
-            padding: 16px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .dropdown-button {
-            cursor: pointer;
-            padding: 14px 20px;
-            background-color: rgba(255, 251, 251, 0.612);
-            border-radius: 5px;
-            margin: 5px 0px;
-            transition: background-color 0.5s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .dropdown-button:hover {
-            background-color: #333;
-            color: #fff;
-        }
-        .dropdown-list {
-            display: none;
-            list-style: none;
-            padding: 0;
-            margin-left: 20px;
-        }
-        .material-symbols-outlined{font-size: 22px;}
-/* more button*/
-        .more-btn {
-            cursor: pointer;
-            padding: 10px 18px;
-            border-radius: 5px;
-            float: right;
-        }
-        .more-btn:hover{background-color: #ffffff67;}
-
-        .box {
-            display: none;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            background-color: #ffffff;
-            padding: 50px 5px 10px 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        .box-link {
-            display: block;
-            padding: 10px ;
-            background-color: #b00000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
-
-        }
-
-        .box-link:hover {background-color: #973030;}
-        
-        /* dropdown-list2*/
-		.dropdown-list2 {
-            width: 500px;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			display: none;
-            list-style: none;
-            padding: 0;
-			position: fixed;
-			right: 8%;
-			top: 15%;
-            transition: background-color 0.5s ease;
-        }
-        .dropdown-list2 li {
-            margin: 20px;
-        }
-        .dropdown-list2 a {
-            text-decoration: none;
-            color: #333;
-            display: inline-block;
-            padding: 10px 10px;
-            background-color: #eee;
-            border-radius: 5px;
-            transition: background-color 0.5s ease;
-        }
-        .dropdown-list2 a:hover {
-            background-color: #333;
-            color: #fff;
-        }
-
-		.close-button {
-    		position: absolute;
-    		top: 5px;
-    		right: 5px;
-    		background: none;
-			border: none;
-    		font-size: 20px;
-    		cursor: pointer;
-		}
-		.close-button:hover{color: #fff;}
-		
-      	.fa{
-            background-color: #eee;
-            border-radius: 44px;
-    		color: #1b1b1b;
-     		font-size: 28px;
-     		width: 36px;
-            margin: 2px 12px;
-     		text-decoration: none;
-            padding: 5px 2px;
-			border: 1px solid #c5000080;
-            transition: background-color 0.5s ease;
- 		}
-        .fa:hover{color:#eee; background-color: #1b1b1b;}
-
-        .sidebox{
-            position: fixed;
-            top: 30%;
-            right: 2em;
-            background-color: #ffffff;
-            color: #b50000;
-            padding: 5px 30px;
-            border-radius: 10px 10px 0 0;
-            transform: rotate(-90deg);
-            transform-origin: right top;
-            text-decoration: none;
-            font-weight: 800;
-            transition: background-color 0.3s ease;
-        }
-        .sidebox:hover{color: #fff; background-color: #b50000;}
-
-        .footer {
-            background-color: rgba(255, 255, 255, 0.7);
-            color: #b30000;
-            text-align: center;
-            width: 100%;
-            padding: 8px 0px 0px 0px;
-        }
-        
-        .footer h5 {
-            margin: 3px 0; 
-        }
-        .rainbow-div {
-            height: 12px;
-            width: 100%;
-            background: linear-gradient(to right, red 0%, red 14.28%, 
-                                        orange 14.28%, orange 28.57%,
-                                        yellow 28.57%, yellow 42.86%, 
-                                        green 42.86%, green 57.14%, 
-                                        blue 57.14%, blue 71.43%, 
-                                        indigo 71.43%, indigo 85.72%, 
-                                        violet 85.72%, violet 100%);
-        }
-
-        /* AD space */
-        .modal{
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            text-align: center;
-            margin: 50px;
-            border: 2px solid wheat;
-        }
-        .modal-content img {
-            width: 500px;            
-        }
-        .close {
-            color: #1b1b1b;
-            position: absolute;
-            font-size: 30px;
-            cursor: pointer;
-            background-color: #ffffff;
-            border-radius: 36px;
-            padding: 3px;
-            margin: 8px;
-        }
-        .close:hover{color: #ffffff; background-color: #1b1b1b;} 
-
-      /* Responsive design for mobile */
-    	@media (max-width: 768px) {
-          body{height: 94vh;}
-        	
-			.dropdown-list2{
-                width: -webkit-fill-available;
-				margin: 0px 30px;
-				background-color: rgba(126, 126, 126, 0.8);
-                right: 0%;
-			}
-            header {
-                text-align: left;
-                padding: 1px;
-			    /*background-color: rgba(197, 0, 0, 0.5);*/
-		    }
-            header h1,h2{
-                display: block;
-            }
-            header h1 {
-                font-size: 42px;
-                margin: 0px 0px 0px 0.45em;
-            }
-            header h2{
-                font-size: 26px;
-        	    margin: 0px 0px 4px .8em;
-            }
-            .more-btn{
-              	position: absolute;
-              	top:0;
-              	right:0;
-            }
-            .modal-content img {
-            width: 100%;            
-            }
-          	.close{
-          	margin: -50px -30px;
-          	}
-    	}
-    </style>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-  </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KX92P2QG4S"></script>
     <script>
@@ -299,31 +28,39 @@
 
             gtag('config', 'G-KX92P2QG4S');
     </script>
+
 </head>
 <body>
 
     <!--AD SPACE-->
 
-    <!--div class="modal" id="myModal">
-        <div class="modal-content">
-            
-            <img src="https://i.imgur.com/ODmI8iT.jpg" alt="Ad Image">
-            <span class="material-symbols-outlined close" onclick="closeModal()">close</span>
+    <div class="modal" id="myModal">
+        <div class="modal-content"> 
+            <span id="countdown">Closing in 5 seconds</span>
+             <!-- <span class="material-symbols-outlined close" onclick="closeModal()">close</span>  -->
+            <img src="images/adImg.jpg" alt="">
         </div>
-    </div   -->
+    </div>
 
     <header>
 
-        <h1>SSMPTC</h1>
+        <h1>SSM POLY</h1>
         <h2>Study Materials</h2>
  
-        <div class="more-btn" onclick="toggleBox()">More</div>
-            <div class="box" id="box">
-                <a href="https://t.me/SfistudyblogBot" class="box-link">For 2015 revision notes <br><u>@SfistudyblogBot</u></a>    
-                <button class="close-button" style="position: absolute; top: 5px; right: 160px;" onclick="closeSubjectsPopup('box')">✖</button>
-            </div>
+        <div class="more-btn" onclick="toggleBox()">REV 2015</div>
+        <div class="box" id="box">
+            <a href="https://t.me/SfistudyblogBot" class="box-link">For 2015 revision notes <br><u>@SfistudyblogBot</u></a>    
+            <button class="close-button" style="position: absolute; top: 5px; right: 160px;" onclick="closeSubjectsPopup('box')">✖</button>
+        </div>
                        
     </header>
+
+    <div class="home">
+        <h3>SFI SSMPTC</h3>
+        <h1>SSM <span>POLY</span></h1>
+        <h2>Study Materials</h2>
+    </div>
+
 <div class="content">
     <div class="container">
         
@@ -385,7 +122,7 @@
 					<button class="close-button" onclick="closeSubjectsPopup('automobileSemester4')">✖</button>
                     <li><a href="https://drive.google.com/drive/folders/1OerPr_XweTkk2g3e3MysMFEQft-s5Xrx?usp=drive_link">Heat Power Engineering</a></li>
                     <li><a href="https://drive.google.com/drive/folders/1boJFhRxfHLqQNlfvgJd4YQA6vlrR9qC3?usp=drive_link">Material Science and Strength of Materials</a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1djxWHHzLpj86AM9sksOJUg_pIfZ_2F48?usp=drive_link">Automobile Chassis and Transmission</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                 </ul>
@@ -444,9 +181,9 @@
                 <div class="dropdown-button" onclick="toggleSubjectsPopup('civilSemester4')">Semester 4<span class="material-symbols-outlined">chevron_right</span></div>
                 <ul class="dropdown-list2" id="civilSemester4">
 					<button class="close-button" onclick="closeSubjectsPopup('civilSemester4')">✖</button>
-                    <li><a href="#">Geotechnical Engineering</a></li>
-                    <li><a href="#">Hydraulics and Irrigation Engineering</a></li>
-                    <li><a href="#">Estimating & Costing</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1NVjHW9N07TloLY3JxkjqEPgFkKLroyLO?usp=drive_link">Geotechnical Engineering</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1vwSsYwKSyMpFb_fQ0f79Uhatqlf3WmLs?usp=drive_link">Hydraulics and Irrigation Engineering</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1lf_qR4-g7q6vBmZvTmGo0fkd8NOEZvQ5?usp=drive_link">Estimating & Costing</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                 </ul>
@@ -467,7 +204,7 @@
                 <div class="dropdown-button" onclick="toggleSubjectsPopup('civilSemester6')">Semester 6<span class="material-symbols-outlined">chevron_right</span></div>
                 <ul class="dropdown-list2" id="civilSemester6">
 					<button class="close-button" onclick="closeSubjectsPopup('civilSemester6')">✖</button>
-                    <li><a href="#">Subject 1</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1XW6P5hM59qaQOHnfbw2zqGsUh1h7mwEi?usp=drive_link">Public Health Engineering</a></li>
                     <li><a href="#">Subject 2</a></li>
                     <li><a href="#">Subject 3</a></li>
                     <li><a href="#">Subject 4</a></li>
@@ -528,7 +265,7 @@
                 <div class="dropdown-button" onclick="toggleSubjectsPopup('computerSemester6')">Semester 6<span class="material-symbols-outlined">chevron_right</span></div>
                 <ul class="dropdown-list2" id="computerSemester6">
 					<button class="close-button" onclick="closeSubjectsPopup('computerSemester6')">✖</button>
-                    <li><a href="#">Subject 1</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1S6SLNOCP_bHAmjp3k0Jl0my0M4g2T4ZG?usp=drive_link">Introduction to IoT</a></li>
                     <li><a href="#">Subject 2</a></li>
                     <li><a href="#">Subject 3</a></li>
                     <li><a href="#">Subject 4</a></li>
@@ -566,9 +303,9 @@
                 <div class="dropdown-button" onclick="toggleSubjectsPopup('electronicsSemester4')">Semester 4<span class="material-symbols-outlined">chevron_right</span></div>
                 <ul class="dropdown-list2" id="electronicsSemester4">
 					<button class="close-button" onclick="closeSubjectsPopup('electronicsSemester4')">✖</button>
-                    <li><a href="#">Microcontroller and Applications</a></li>
-                    <li><a href="#">Electronic Measurements and Instrumentation</a></li>
-                    <li><a href="#">Linear Integrated Circuits</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1-_ABUyjt1CvJEZzW3mr5HCOoBZqZ13bf?usp=drive_link">Microcontroller and Applications</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1H2sYAhddAVzsyQqMnX3ErBsMeU9Er9Tl?usp=drive_link">Electronic Measurements and Instrumentation</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1qGW7N-x70OP-sL0vhNPRo696GxbUtneA?usp=drive_link">Linear Integrated Circuits</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                 </ul>
@@ -589,7 +326,7 @@
                 <div class="dropdown-button" onclick="toggleSubjectsPopup('electronicsSemester6')">Semester 6<span class="material-symbols-outlined">chevron_right</span></div>
                 <ul class="dropdown-list2" id="electronicsSemester6">
 					<button class="close-button" onclick="closeSubjectsPopup('electronicsSemester6')">✖</button>
-                    <li><a href="#">Subject 1</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1_XkGMTzGlbyew9H3JlmzrExBTZoqnnjx?usp=drive_link">Verilog HDL & Programmable Logic Devices</a></li>
                     <li><a href="#">Subject 2</a></li>
                     <li><a href="#">Subject 3</a></li>
                     <li><a href="#">Subject 4</a></li>
@@ -711,7 +448,7 @@
                  <div class="dropdown-button" onclick="toggleSubjectsPopup('mechanicalSemester6')">Semester 6<span class="material-symbols-outlined">chevron_right</span></div>
                  <ul class="dropdown-list2" id="mechanicalSemester6">
 					<button class="close-button" onclick="closeSubjectsPopup('mechanicalSemester6')">✖</button>
-                     <li><a href="#">Subject 1</a></li>
+                     <li><a href="https://drive.google.com/drive/folders/1UK9-APAITGSL8hGMLTuzwu1Zk1xbWoCU?usp=drive_link">Mechatronics</a></li>
                      <li><a href="#">Subject 2</a></li>
                      <li><a href="#">Subject 3</a></li>
                      <li><a href="#">Subject 4</a></li>
@@ -719,6 +456,18 @@
                  </ul>
              
          </ul>
+
+
+          <!-- Structure for the S6 Common subject -->
+        <div class="dropdown-button" onclick="toggleDropdown('semSixComsub')">S6 Common subjects<span class="material-symbols-outlined">expand_more</span></div>
+        
+        <ul class="dropdown-list" id="semSixComsub">
+
+            <li><a href="#">Entrepreneurship and Startup</a></li>
+            <li><a href="https://drive.google.com/file/d/1hVmZ6OJoQMxWBTTDttLptMzvJm5FUgdr/view?usp=drive_link">Indian Constitution</a></li>
+           
+        </ul>
+
     </div>
 
     <a href="https://wa.me/+917907932464?text=Name:%0D%0ACollege:%0D%0ADept%20%26%20Sem:%0D%0AIssue/Feedback:" class="sidebox">Any issues?</a>
@@ -726,9 +475,9 @@
 </div>
  <div class="footer">
    	<div class="social-buttons">
-    <a href="http://wa.me/+917994029804?text=Name:%0D%0ACollege:%0D%0ADept%20%26%20Sem:%0D%0AIssue/Feedback:" class="fa fa-whatsapp"></a>
-    <a href="https://www.instagram.com/sfi_ssmptc/" class="fa fa-instagram"></a>
-    <a href="www.facebook.com/Sfi-ssmptc-unit-213739052157959/" class="fa fa-facebook"></a>
+        <a href="http://wa.me/+917994029804?text=Name:%0D%0ACollege:%0D%0ADept%20%26%20Sem:%0D%0AIssue/Feedback:" class="fa fa-whatsapp"></a>
+        <a href="https://www.instagram.com/sfi_ssmptc/" class="fa fa-instagram"></a>
+        <a href="www.facebook.com/Sfi-ssmptc-unit-213739052157959/" class="fa fa-facebook"></a>
 	</div>
     <h5 style="font-size: 18px;">Created by SFI SSMPTC Unit</h5>
     <h5 style="font-size: 14px;">Seethi Sahib Memorial Polytechnic College, Tirur</h5>
@@ -736,58 +485,5 @@
     <div class="rainbow-div"></div>
  </div>
  
-    <script>
-		
-        function toggleDropdown(id) {
-            const dropdown = document.getElementById(id);
-            if (dropdown.style.display === "none" || dropdown.style.display === "") {
-                dropdown.style.display = "block";
-            } else {
-                dropdown.style.display = "none";
-            }
-        }
-
-		// Function to show/hide subject popup when a semester button is clicked
-		function toggleSubjectsPopup(id) {
-    		const popup = document.getElementById(id);
-    		const popups = document.querySelectorAll('.dropdown-list2');
-    
-    	// Close all other subject popups except the one being clicked
-    		popups.forEach((popupElement) => {
-        	if (popupElement.id !== id) {
-            popupElement.style.display = 'none';
-        }
-    	});
-
-    // Toggle the display of the subject popup for the clicked semester
-    		if (popup.style.display === 'none' || popup.style.display === '') {
-        		popup.style.display = 'block';
-    		} else {
-        		popup.style.display = 'none';
-    		}
-		}
-
-		function closeSubjectsPopup(id) {
-    		const popup = document.getElementById(id);
-    			popup.style.display = 'none';
-		}
-
-        function toggleBox() {
-    var box = document.getElementById('box');
-    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
-    }
-
-     // Add this JavaScript to show the modal when the page loads
-window.onload = function() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = 'flex';
-}
-
-// Function to close the modal
-function closeModal() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = 'none';
-}
-    </script>
 </body>
 </html>
