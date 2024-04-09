@@ -38,6 +38,13 @@ box.style.display = (box.style.display === 'none' || box.style.display === '') ?
 }
 
 
+
+    // Function to close the modal
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
 // Function to close the modal
 function closeModal() {
     var modal = document.getElementById("myModal");
@@ -50,13 +57,24 @@ function updateCountdown(seconds) {
     countdownElement.textContent = "Closing in " + seconds + " seconds";
 }
 
+// Function to switch images
+function switchImages() {
+    var image1 = document.getElementById("image1");
+    var image2 = document.getElementById("image2");
+
+    image1.style.display = "none";
+    image2.style.display = "block";
+}
+
 // Countdown timer
-var countdownSeconds = 5;
+var countdownSeconds = 5; // Total time = 2.5s (image1) + 2.5s (image2)
 var countdownInterval = setInterval(function() {
     updateCountdown(countdownSeconds);
     countdownSeconds--;
     if (countdownSeconds < 0) {
         clearInterval(countdownInterval);
         closeModal();
+    } else if (countdownSeconds === 2) {
+        switchImages();
     }
 }, 1000); // Update countdown every second

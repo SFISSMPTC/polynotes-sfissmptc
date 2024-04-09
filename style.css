@@ -28,8 +28,8 @@ div{
 /* AD space */
 .modal{
     display: grid;
-    position: fixed;;
-    /* z-index: 5; */
+    position: fixed;
+    z-index: 2;
     width: 100vw;
     height: -webkit-fill-available;
     background-color: rgba(0, 0, 0, 0.9);
@@ -39,7 +39,6 @@ div{
 .modal .modal-content {
     display: grid;
     text-align: center;
-    /* justify-items: end; */
     margin: 15px;
 }
 .modal .modal-content span{
@@ -52,7 +51,9 @@ div{
 }
 .modal .modal-content img {
     margin: auto;
-    width: 460px;            
+    width: 460px;
+    border: 2px solid white;
+    border-radius: 12px;            
 }
 
 .modal .modal-content .close {
@@ -81,8 +82,8 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* height: 100vh; */
 }
 
@@ -146,13 +147,14 @@ header .box .box-link:hover {background-color: #973030;}
 
 .home{
     font-family: 'Nova Square';
-    height: 100vh;
+    height: 100dvh;
     border-bottom: 2px solid;
     display: grid;
     align-content: center;
     justify-items: center;
     color: #df0000;
     background-image: url(images/homeBg3.jpg);
+    background-size: 50%;
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
     /* background-attachment: fixed; */
@@ -189,13 +191,14 @@ header .box .box-link:hover {background-color: #973030;}
 /* ========================================================== */
 
 .content{
-    flex: 1;
-    overflow-y: none;
+    height: 100dvh;
+    display: grid;
+    align-content: space-between;
 }
 
 .content .container {
     max-width: 600px;
-    margin: 30px 20px;
+    margin: 20px;
     padding: 16px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
@@ -291,7 +294,7 @@ header .box .box-link:hover {background-color: #973030;}
 
 
 
-.footer {
+.content .footer {
     background-color: rgba(255, 255, 255, 0.7);
     color: #b30000;
     text-align: center;
@@ -299,10 +302,10 @@ header .box .box-link:hover {background-color: #973030;}
     padding: 8px 0px 0px 0px;
 }
 
-.footer h5 {
+.content .footer h5 {
     margin: 3px 0; 
 }
-.rainbow-div {
+.content .footer .rainbow-div {
     height: 12px;
     width: 100%;
     background: linear-gradient(to right, red 0%, red 14.28%, 
@@ -314,7 +317,7 @@ header .box .box-link:hover {background-color: #973030;}
                                 violet 85.72%, violet 100%);
 }
 
-.footer .social-buttons .fa{
+.content .footer .social-buttons .fa{
     background-color: #eee;
     border-radius: 44px;
     color: #1b1b1b;
@@ -327,7 +330,7 @@ header .box .box-link:hover {background-color: #973030;}
     transition: background-color 0.5s ease;
 }
 
-.footer .social-buttons .fa:hover{
+.content .footer .social-buttons .fa:hover{
     color:#eee; 
     background-color: #1b1b1b;
 }
@@ -367,12 +370,14 @@ header .box .box-link:hover {background-color: #973030;}
         right: 0%;
     }
 
-
+    .home {
+        background-size: 100%;
+    }
     .home h1{
         font-size: 70px;
         margin: 0px;
-        letter-spacing: -6px;
-        -webkit-text-stroke: 2px #df0000;
+        letter-spacing: 0px;
+        -webkit-text-stroke: 1px #df0000;
         color: transparent;
     }
     .home h1 span{
@@ -396,12 +401,8 @@ header .box .box-link:hover {background-color: #973030;}
 
 }
 
-@media (max-width: 550px){
-    header h1,h2{
-        display: block;
-    }
-
-    header h2{
-        margin-left: 0;
+@media (max-width: 370px){
+    .home h1{
+        font-size: 60px;
     }
 }
