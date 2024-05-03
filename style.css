@@ -188,6 +188,27 @@ header .box .box-link:hover {background-color: #973030;}
     border-radius: 36px;
 }
 
+.home .scroll{
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    margin: 50px 0px -50px 0;
+}
+.home .scroll img{
+        width: 75px;
+        border-radius: 40px;
+        margin-bottom: -15px;
+        
+}
+
+.home .scroll img.mobile{
+    display: none;  
+}
+.home .scroll p.mobile{
+display: none;  
+}
+
+
 /* ========================================================== */
 
 .content{
@@ -398,6 +419,30 @@ header .box .box-link:hover {background-color: #973030;}
         padding: 5px 20px;
         border-radius: 36px;
     }
+
+    .home .scroll{
+        display: grid;
+        text-align: center;
+        justify-items: center;
+        margin: 50px 0px -50px 0;
+    }
+    .home .scroll img.desktop{
+            display: none;  
+    }
+    .home .scroll p.desktop{
+        display: none;  
+    }
+
+    .home .scroll{
+        margin: 160px 0px -160px 0;
+    }
+    .home .scroll img.mobile{
+        display: unset;  
+    }
+    .home .scroll p.mobile{
+    display: unset;  
+    }
+    
 
 }
 
