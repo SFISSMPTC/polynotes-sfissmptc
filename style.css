@@ -438,6 +438,8 @@ display: none;
     }
     .home .scroll img.mobile{
         display: unset;  
+        background-color: #c5000030;
+        padding: 15px 0;
     }
     .home .scroll p.mobile{
     display: unset;  
