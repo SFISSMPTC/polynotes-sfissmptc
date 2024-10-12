@@ -220,7 +220,7 @@ display: none;
 .content .container {
     max-width: 600px;
     margin: 20px;
-    padding: 16px;
+    padding: 13px 16px; 
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -324,18 +324,21 @@ display: none;
 }
 
 .content .footer h5 {
-    margin: 3px 0; 
+    margin: 5px 0; 
 }
 .content .footer .rainbow-div {
-    height: 12px;
+    /* height: 12px; */
     width: 100%;
-    background: linear-gradient(to right, red 0%, red 14.28%, 
-                                orange 14.28%, orange 28.57%,
-                                yellow 28.57%, yellow 42.86%, 
-                                green 42.86%, green 57.14%, 
-                                blue 57.14%, blue 71.43%, 
-                                indigo 71.43%, indigo 85.72%, 
-                                violet 85.72%, violet 100%);
+    background: linear-gradient(to right, 
+                            #8B0000 0%, #8B0000 16.66%, /* Dark Red */
+                            #db0808 16.66%, #db0808 33.33%, /* Maroon */
+                            #ffd7d7 33.33%, #ffd7d7 50%, /* Burnt Orange */
+                            #ffd7d7 33.33%, #ffd7d7 66.66%, /* Dark Yellow */
+                            #db0808 16.66%, #db0808 83.33%, /* Gray */
+                            #8B0000 0%, #8B0000 100%); /* Copper */
+
+
+
 }
 
 .content .footer .social-buttons .fa{
