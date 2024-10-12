@@ -327,18 +327,12 @@ display: none;
     margin: 5px 0; 
 }
 .content .footer .rainbow-div {
-    /* height: 12px; */
+    color: #fff;
     width: 100%;
     background: linear-gradient(to right, 
-                            #8B0000 0%, #8B0000 16.66%, /* Dark Red */
-                            #db0808 16.66%, #db0808 33.33%, /* Maroon */
-                            #ffd7d7 33.33%, #ffd7d7 50%, /* Burnt Orange */
-                            #ffd7d7 33.33%, #ffd7d7 66.66%, /* Dark Yellow */
-                            #db0808 16.66%, #db0808 83.33%, /* Gray */
-                            #8B0000 0%, #8B0000 100%); /* Copper */
-
-
-
+                            #940000 0%, #940000 25%, 
+                            #c30101 25%, #c30101 75%, 
+                            #940000 75%, #940000 100%);
 }
 
 .content .footer .social-buttons .fa{
